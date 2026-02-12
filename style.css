@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe4e1, #ffb6c1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+    background: linear-gradient(45deg, #d63384, #ff6fa5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    letter-spacing: 1.5px;
+    position: relative;
+}
+@keyframes aparecerTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    animation: aparecerTitulo 1.2s ease-out;
+}
+
+h1::after {
+    content: "— nuestra historia —";
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    color: #d63384;
+    opacity: 0.6;
+}
+
+.intro {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+h2 {
+    margin-top: 50px;
+}
+
+.albums {
+    margin-top: 60px;
+}
+.galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.recuerdo {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.recuerdo img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.recuerdo p {
+    color: #444;
+    font-size: 1rem;
+}
+/* ===== SECCIÓN ÁLBUMES ===== */
+
+.albums {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 750px;
+    margin: 0 auto 60px auto;
+}
+
+/* Tarjeta de cada álbum */
+.album {
+    background: linear-gradient(135deg, #ffffff, #fff5f8);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Títulos */
+.album h3 {
+    color: #d63384;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+
+.album h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #b82d6f;
+}
+
+/* Artista */
+.artista {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Botón Spotify */
+.album a {
+    display: inline-block;
+    background: #1db954;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.album a:hover {
+    background: #17a74a;
+    transform: scale(1.05);
+}
+
+/* Notas simples (primer álbum) */
+.notas p {
+    font-weight: bold;
+    color: #444;
+    margin: 4px 0;
+}
+
+/* Comentario final */
+.comentario {
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #d63384;
+    padding-left: 10px;
+}
+
+/* ===== LISTA DE CANCIONES ===== */
+
+.lista-canciones {
+    margin-top: 10px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.lista-canciones li {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    background: #fff0f5;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    transition: background 0.2s ease;
+}
+
+.lista-canciones li:hover {
+    background: #ffe4ef;
+}
+.promedio-album {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #fff0f5;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+.nuestro-tiempo {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #fff0f5;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.contador div {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    min-width: 90px;
+}
+
+.contador span {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #e75480;
+}
+
+.contador small {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.nota-tiempo {
+    margin-top: 20px;
+    font-style: italic;
+}
+.carta {
+    margin-top: 70px;
+    padding: 45px 35px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background: linear-gradient(180deg, #fffafc, #fff1f6);
+    border-radius: 25px;
+
+    line-height: 1.9;
+    font-size: 1.08em;
+    color: #333;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+/* pequeño detalle decorativo */
+.carta::before {
+    content: "💌";
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 6px 10px;
+    border-radius: 50%;
+    font-size: 1.2em;
+}
+
+.carta h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.carta p {
+    margin-bottom: 20px;
+}
+
+
+.carta strong {
+    color: #e75480;
+}
+
+
+.firma {
+    text-align: right;
+    font-style: italic;
+    margin-top: 35px;
+    font-size: 1.05em;
+}
+
+/* nota secreta */
+.nota-secreta {
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0.6;
+    margin-top: 25px;
+}
+.footer-texto {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: 0.85em;
+    opacity: 0.6;
+}
+.mensaje-secreto {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.mensaje-secreto input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.mensaje-secreto button {
+    padding: 10px 18px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e75480;
+    color: white;
+    cursor: pointer;
+}
+
+#mensaje-oculto {
+    display: none;
+    margin-top: 20px;
+    font-style: italic;
+}
+#mensaje-oculto {
+    display: none;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+#mensaje-oculto.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.btn-musica {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e75480;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.galeria {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 25px;              
+    margin-top: 40px;
+}
+
+
+.recuerdo {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+}
+
+
+.galeria img,
+.galeria video {
+    width: 300px;
+    border-radius: 12px;
+    display: block;
+}
+
+
+.recuerdo p {
+    text-align: center;
+    margin-top: 10px;
+}
+.pie-recuerdos {
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
