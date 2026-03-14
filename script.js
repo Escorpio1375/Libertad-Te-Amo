@@ -47,3 +47,11 @@ function toggleMusica() {
         reproduciendo = false;
     }
 }
+function abrirImagen(img){
+document.getElementById("visor-imagen").style.display="flex";
+document.getElementById("imagen-grande").src=img.src;
+}
+
+function cerrarImagen(){
+document.getElementById("visor-imagen").style.display="none";
+}

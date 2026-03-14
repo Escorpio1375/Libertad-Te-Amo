@@ -394,3 +394,80 @@ h2 {
     margin-right: auto;
     line-height: 1.6;
 }
+/* SECCIÓN PLAYA */
+
+.salida-playa{
+margin-top:70px;
+text-align:center;
+}
+
+/* collage */
+
+.collage-playa{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+max-width:900px;
+margin:auto;
+margin-top:30px;
+}
+
+/* estilo polaroid */
+
+.polaroid{
+background:white;
+padding:12px 12px 25px 12px;
+border-radius:6px;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+text-align:center;
+transition:transform 0.3s;
+}
+
+/* rotación tipo fotos tiradas */
+
+.polaroid:nth-child(odd){
+transform:rotate(-2deg);
+}
+
+.polaroid:nth-child(even){
+transform:rotate(2deg);
+}
+
+.polaroid img{
+width:100%;
+border-radius:4px;
+cursor:pointer;
+}
+
+.polaroid p{
+margin-top:10px;
+font-size:0.9rem;
+color:#444;
+}
+
+/* efecto hover */
+
+.polaroid:hover{
+transform:rotate(0deg) scale(1.05);
+}
+
+/* visor de imagen grande */
+
+#visor-imagen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+#visor-imagen img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
