@@ -55,3 +55,12 @@ document.getElementById("imagen-grande").src=img.src;
 function cerrarImagen(){
 document.getElementById("visor-imagen").style.display="none";
 }
+function revelar(elemento) {
+    elemento.classList.toggle("activa");
+
+    // efecto pequeño al hacer click
+    elemento.style.transform = "scale(1.05)";
+    setTimeout(() => {
+        elemento.style.transform = "scale(1)";
+    }, 150);
+}
