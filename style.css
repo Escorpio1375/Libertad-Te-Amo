@@ -472,68 +472,77 @@ max-height:90%;
 border-radius:10px;
 }
 .diez-cosas {
-    margin-top: 70px;
+    margin-top: 80px;
     text-align: center;
 }
 
-.lista-amor {
+.grid-amor {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    max-width: 800px;
-    margin: 30px auto;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 850px;
+    margin: 40px auto;
 }
 
-/* Tarjetas */
+/* TARJETA */
 .cosa {
-    background: white;
-    padding: 20px;
+    position: relative;
+    height: 120px;
+
     border-radius: 20px;
     cursor: pointer;
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #ffffff, #ffeef5);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 
-    transform: scale(0.95);
-    opacity: 0.7;
-
-    transition: all 0.3s ease;
-}
-
-/* Número */
-.cosa span {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #e75480;
-    margin-bottom: 10px;
-}
-
-/* Texto oculto inicialmente */
-.cosa p {
-    opacity: 0;
-    transform: translateY(10px);
+    overflow: hidden;
     transition: all 0.4s ease;
 }
 
-/* Hover */
 .cosa:hover {
-    transform: scale(1);
+    transform: translateY(-5px);
 }
 
-/* Revelado */
+/* NUMERO GRANDE */
+.numero {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgba(231, 84, 128, 0.2);
+    top: 10px;
+    left: 15px;
+}
+
+/* TEXTO */
+.contenido {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* ACTIVAR */
 .cosa.activa {
-    opacity: 1;
-    transform: scale(1);
-    background: linear-gradient(135deg, #fff, #ffe4ef);
+    background: linear-gradient(135deg, #fff, #ffd6e6);
 }
 
-.cosa.activa p {
+.cosa.activa .contenido {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* La número 10 especial */
-.especial {
-    background: linear-gradient(135deg, #ffe4e1, #ffb6c1);
-    font-weight: bold;
+/* TARJETA FINAL */
+.final {
+    background: linear-gradient(135deg, #ff8fab, #ff4d88);
+}
+
+.final .contenido {
+    color: white;
 }
