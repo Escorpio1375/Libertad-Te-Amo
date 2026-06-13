@@ -64,3 +64,18 @@ function revelar(elemento) {
         elemento.style.transform = "scale(1)";
     }, 150);
 }
+const elementos = document.querySelectorAll(".aparecer");
+
+function mostrarElementos() {
+    elementos.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const visible = window.innerHeight - 100;
+
+        if (top < visible) {
+            el.style.animationPlayState = "running";
+        }
+    });
+}
+
+window.addEventListener("scroll", mostrarElementos);
+mostrarElementos();
